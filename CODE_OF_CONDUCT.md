@@ -1,4 +1,4 @@
-{%- if cookiecutter.use_contributor_covenant == "y" -%}
+
 # Contributor Covenant Code of Conduct
 
 ## Our Pledge
@@ -61,7 +61,7 @@ representative at an online or offline event.
 
 Instances of abusive, harassing, or otherwise unacceptable behavior may be
 reported to the community leaders responsible for enforcement at
-{{ cookiecutter.author_email }}.
+<tammymakesthings@gmail.com>
 
 All complaints will be reviewed and investigated promptly and fairly.
 
@@ -133,4 +133,3 @@ For answers to common questions about this code of conduct, see the FAQ at
 [FAQ]: https://www.contributor-covenant.org/faq
 [translations]: https://www.contributor-covenant.org/translations
 
-{%- endif -%}

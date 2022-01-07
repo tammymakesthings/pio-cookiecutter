@@ -1,11 +1,17 @@
 #pragma once
 
-#ifndef __HAS__{{ cookiecutter.project_name.upper() }}App.h
-#define __HAS__{{ cookiecutter.project_name.upper() }}App.h
+#ifndef __HAS__{%- cookiecutter.pio_classname.upper() -%}_APP_H__
+#define __HAS__{%- cookiecutter.pio_classname.upper() -%}_APP_H__
 
 {%- if cookiecutter.framework == 'Arduino' -%}
 #include <Arduino.h>
 {%- elif cookiecutter.framework == 'ESP-IDF'-%}
+#include <stdlib.h>
+#include <string.h>
+#include <sys/cdefs.h>
+
+#include "esp_log.h"
+#include "esp_attr.h"
 {%- endif -%}
 
 #include "config.h"
@@ -17,16 +23,16 @@
 #include <FastLED.h>
 {%- endif -%}
 
-#include "{{ cookiecutter.project_name  }}App.h"
+#include "{{ cookiecutter.pio_classname  }}App.h"
 
 {%- if cookiecutter.framework == 'Arduino' -%}
-class {{ cookiecutter.project_name}}App
+class {{ cookiecutter.pio_classname}}App
 {
     private:
         // Instance variables
     public:
-        {{ cookiecutter.projectName }}App();
-        ~{{ cookiecutter.projectName }}App();
+        {{ cookiecutter.pio_classname }}App();
+        ~{{ cookiecutter.pio_classname }}App();
         virtual void Setup();
         virtual void Loop();
 };
@@ -34,4 +40,4 @@ class {{ cookiecutter.project_name}}App
 {%- elif cookiecutter.framework == 'ESP-IDF'-%}
 {%- endif -%}
 
-#endif /* __HAS__{{ cookiecutter.project_name.upper() }}APP_H */
+#endif /* __HAS__{%- cookiecutter.pio_classname.upper() -%}_APP_H__ */

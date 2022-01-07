@@ -1,5 +1,6 @@
 {%- if cookiecutter.framework == 'Arduino' -%}
 #include <Arduino.h>
+
 {%- if cookiecutter.use_u8g2 -%}
 #include <U8g2lib.h>
 {%- endif -%}
@@ -16,17 +17,22 @@
 
 #include "config.h"
 
-#include "{{ cookiecutter.pio_classname  }}App.h"
+#include "{{  cookiecutter.pio_classname   }}App.h"
 
-{{ cookiecutter.pio_classname }}App gApp = {{ cookiecutter.pio_classname }}App();
+{{ cookiecutter.pio_classname }}App::{{  cookiecutter.pio_classname }}App() {
 
-void setup() {
-    gApp.Setup();
 }
 
-void loop() {
-    gApp.Loop();
+{{ cookiecutter.pio_classname }}App::~{{  cookiecutter.pio_classname }}App() {
+
 }
 
+virtual void {{ cookiecutter.pio_classname }}App::Setup() {
+
+}
+
+virtual void {{ cookiecutter.pio_classname }}App::Loop() {
+
+}
 {%- elif cookiecutter.framework == 'ESP-IDF'-%}
 {%- endif -%}
