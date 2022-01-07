@@ -16,5 +16,5 @@
 
     "year": "{% now 'utc', '%Y' %}",
     "pio_classname": "{% cookiecutter.project_slug.replace('_', ' ').title().replace(' ', '') %}",
-    "_extensions": ["jinja2_time.TimeExtension"],
+    "_extensions": ["jinja2_time.TimeExtension"]
 }
