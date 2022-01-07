@@ -1,0 +1,18 @@
+{
+    "project_name": "my_project",
+    "project_description": "My Awesome Project",
+    "version": "0.1.0",
+    "author_name": "Tammy Cravit",
+    "author_email": "tammymakesthings@gmail.com",
+    "github_username": "tammymakesthings",
+    "license": ["MIT", "BSD-3", "not open source"],
+    "board": ["Adafruit Feather M0 Express", "ESP32-WROOM Dev Kit", "Heltec ESP32-OLED", "other"],
+    "framework": ["Arduino", "ESP-IDF"],
+    "use_spi": "y",
+    "use_u8g2": "y",
+    "use_fastled": "y",
+    "generate_linker_map": "y",
+    "use_contributor_covenant": "y",
+
+    "_extensions": ["jinja2_time.TimeExtension"],
+}
